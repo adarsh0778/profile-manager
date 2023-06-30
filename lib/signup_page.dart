@@ -12,7 +12,7 @@ class SignUpScreen extends StatelessWidget {
     final _formkey = GlobalKey<FormState>();
     return SafeArea(
         child: Scaffold(
-      body: SingleChildScrollView(
+      body: Center(
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 20.0),
           child: Form(
