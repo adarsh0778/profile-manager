@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_page/signup_controller.dart';
+import 'package:login_page/updateprofilescreen.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -52,6 +53,12 @@ class SignUpScreen extends StatelessWidget {
                               controller.email.text.trim(),
                               controller.password.text.trim());
                         }
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const updateprofilescreen()),
+                        );
                       },
                       child: Text("SIGNUP")),
                 ),

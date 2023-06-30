@@ -14,13 +14,14 @@ class SignUpController extends GetxController {
   final userRepo = Get.put(UserRepository());
 
   void registerUser(String email, String password) {
-    String? error = AuthenticationRepository.instance.createUserWithEmailAndPassword(email, password) as String;
-    if (error != null){
+    String? error = AuthenticationRepository.instance
+        .createUserWithEmailAndPassword(email, password) as String;
+    if (error != null) {
       Get.showSnackbar(GetSnackBar(message: error.toString()));
     }
   }
 
-  Future<void> createUser(UserModel user) async{
+  Future<void> createUser(UserModel user) async {
     await userRepo.createUser(user);
   }
 }
